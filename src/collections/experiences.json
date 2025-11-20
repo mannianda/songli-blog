@@ -1,16 +1,16 @@
 [
 	{
-		"dates": "June 2018 · Present",
-		"role": "Web & Product Designer",
-		"company": "Company Name",
-		"description": "Leading the design of user-centric web applications and dating platforms.",
+		"dates": "2018年6月 · 至今",
+		"role": "网页与产品设计师",
+		"company": "公司名称",
+		"description": "主导以用户为中心的网页应用和约会平台设计。",
 		"logo": "/assets/experiences/company.jpg"
 	},
 	{
-		"dates": "July 2016 · June 2017",
-		"role": "Web & Product Designer",
-		"company": "Company Name",
-		"description": "Spearheaded the design and development of e-commerce websites and online marketplaces.",
+		"dates": "2016年7月 · 2017年6月",
+		"role": "网页与产品设计师",
+		"company": "公司名称",
+		"description": "主导电子商务网站和在线市场的设计与开发。",
 		"logo": "/assets/experiences/company.jpg"
 	}
 

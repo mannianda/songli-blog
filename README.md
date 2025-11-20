@@ -1,216 +1,204 @@
-# Rico Portfolio - Designer Portfolio Website
 
-> [中文文档](README-zh.md) | English
 
-A modern, high-performance designer portfolio website template built with Astro. Features a retro blue theme, dark mode support, beautiful animations, and excellent user experience.
+# Rico Portfolio - 设计师个人作品集网站
+
+一个基于 Astro 构建的现代化、高性能设计师个人作品集网站模板。采用复古蓝色主题，支持暗色模式，具有精美的动画效果和优秀的用户体验。
 
 ![Astro](https://img.shields.io/badge/Astro-5.15.4-FF5D01?logo=astro&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-4.1.14-38B2AC?logo=tailwind-css&logoColor=white)
 ![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)
 
-## ✨ Features
+## ✨ 特性
 
-- 🚀 **Built with Astro** - Fast and lightweight static site generator
-- 🎨 **Modern Design** - Retro blue theme with dark/light mode toggle
-- 📱 **Fully Responsive** - Adapts to all device sizes
-- 🎭 **Beautiful Animations** - Using AOS and custom animation effects
-- 📝 **Blog System** - Supports MDX format blog posts
-- 🎯 **Portfolio Showcase** - Elegant portfolio showcase pages
-- 🔍 **SEO Optimized** - Built-in SEO and social media tags
-- ⚡ **Performance Optimized** - Image optimization, code splitting, lazy loading
-- 🌐 **i18n Support** - Easy to extend for multi-language support
+- 🚀 **基于 Astro** - 快速、轻量级的静态站点生成器
+- 🎨 **现代化设计** - 复古蓝色主题，支持暗色/亮色模式切换
+- 📱 **完全响应式** - 适配各种设备尺寸
+- 🎭 **精美动画** - 使用 AOS 和自定义动画效果
+- 📝 **博客系统** - 支持 MDX 格式的博客文章
+- 🎯 **作品展示** - 优雅的作品集展示页面
+- 🔍 **SEO 优化** - 内置 SEO 和社交媒体标签
+- ⚡ **性能优化** - 图片优化、代码分割、懒加载
+- 🌐 **国际化支持** - 易于扩展多语言支持
 
-## 🛠️ Tech Stack
+## 🛠️ 技术栈
 
-- **Framework**: [Astro](https://astro.build) 5.15.4 (v6 compatible)
-- **Styling**: [Tailwind CSS](https://tailwindcss.com) 4.1.14
-- **Animations**: [AOS](https://michalsnik.github.io/aos/)
-- **Physics Engine**: [Matter.js](https://brm.io/matter-js/)
-- **Content Management**: MDX
-- **Type Checking**: TypeScript
+- **框架**: [Astro](https://astro.build) 5.15.4 (兼容 v6)
+- **样式**: [Tailwind CSS](https://tailwindcss.com) 4.1.14
+- **动画**: [AOS](https://michalsnik.github.io/aos/)
+- **物理引擎**: [Matter.js](https://brm.io/matter-js/)
+- **内容管理**: MDX
+- **类型检查**: TypeScript
 
-## 📦 Installation
+## 📦 安装
 
-### Using Package Manager
+### 使用包管理器
 
 ```bash
 
-# Using pnpm (recommended)
+# 使用 pnpm (推荐)
 pnpm install
 
-# Using npm
+
+# 使用 npm
 npm install
 
-# Using yarn
+
+# 使用 yarn
 yarn install
 ```
 
-### Environment Variables Configuration
+### 环境变量配置
 
-Copy `.env.example` to `.env` and fill in the corresponding configuration:
+复制 `.env.example` 文件为 `.env` 并填写相应的配置：
 
 ```bash
 cp .env.example .env
 ```
 
-Edit the `.env` file and fill in your configuration:
+编辑 `.env` 文件，填入你的配置：
 
 ```env
-# Site URL (optional, but has default value https://your-domain.com)
-# You can skip this on first deployment, but it's recommended to set the correct domain as soon as possible to optimize SEO
+# 站点 URL（可选，但有默认值 https://your-domain.com）
+# 首次部署可以不设置，但建议尽快设置正确的域名以优化 SEO
 PUBLIC_SITE_URL=https://your-domain.com
 
-# Analytics (optional)
+# 分析工具（可选）
 PUBLIC_GA4_ID=your-google-analytics-id
 PUBLIC_UMAMI_ID=your-umami-id
 ```
 
-> **Note**: If `PUBLIC_SITE_URL` is not set, it will use the default value `https://your-domain.com`. While it won't cause errors, it's recommended to set the correct domain after deployment to ensure sitemap, RSS feed, and SEO meta tags work properly.
+> **注意**：`PUBLIC_SITE_URL` 如果没有设置，会使用默认值 `https://your-domain.com`。虽然不会报错，但建议在部署后尽快设置正确的域名，以确保 sitemap、RSS feed 和 SEO 元标签正常工作。
 
-## 🚀 Development
+## 🚀 开发
 
 ```bash
-# Start development server
+# 启动开发服务器
 npm run dev
-# or
+# 或
 pnpm dev
 
-# Visit http://localhost:4321
+# 访问 http://localhost:4321
 ```
 
-## 📦 Build
+## 📦 构建
 
 ```bash
-# Build for production
+# 构建生产版本
 npm run build
 
-# Preview build result
+# 预览构建结果
 npm run preview
 ```
 
-## 📁 Project Structure
+## 📁 项目结构
 
 ```
-├── public/              # Static assets
-│   ├── assets/         # Images, videos, etc.
-│   └── favicon.png     # Site favicon
+├── public/              # 静态资源
+│   ├── assets/         # 图片、视频等资源
+│   └── favicon.png     # 网站图标
 ├── src/
-│   ├── assets/         # Source assets
-│   ├── collections/    # Data collections (works, experiences, etc.)
-│   ├── components/     # Astro components
-│   │   ├── cards/      # Card components
-│   │   ├── sections/   # Section components
-│   │   ├── ui/         # UI components
-│   │   └── widgets/    # Widgets
-│   ├── config/         # Configuration files
-│   ├── content/        # MDX blog content
-│   ├── layouts/        # Layout components
-│   ├── pages/          # Page routes
-│   ├── scripts/        # Script files
-│   └── styles/         # Style files
-├── astro.config.mjs    # Astro configuration
-├── tailwind.config.mjs # Tailwind configuration
-└── package.json        # Project dependencies
+│   ├── assets/         # 源代码资源
+│   ├── collections/    # 数据集合（作品、经历等）
+│   ├── components/     # Astro 组件
+│   │   ├── cards/      # 卡片组件
+│   │   ├── sections/   # 页面区块组件
+│   │   ├── ui/         # UI 组件
+│   │   └── widgets/    # 小部件
+│   ├── config/         # 配置文件
+│   ├── content/        # MDX 博客内容
+│   ├── layouts/        # 布局组件
+│   ├── pages/          # 页面路由
+│   ├── scripts/        # 脚本文件
+│   └── styles/         # 样式文件
+├── astro.config.mjs    # Astro 配置
+├── tailwind.config.mjs # Tailwind 配置
+└── package.json        # 项目依赖
 ```
 
-## 🎨 Customization
+## 🎨 自定义配置
 
-### Modify Site Information
+### 修改网站信息
 
-Edit the `src/config/site.js` file to modify the site's basic information:
+编辑 `src/config/site.js` 文件，修改网站的基本信息：
 
 ```javascript
 export const siteConfig = {
   title: "Your Portfolio",
   author: "Your Name",
   url: "https://your-domain.com",
-  // ... more configuration
+  // ... 更多配置
 };
 ```
 
-### Modify Theme Colors
+### 修改主题颜色
 
-Edit the CSS variables in the `src/styles/global.css` file:
+编辑 `src/styles/global.css` 文件中的 CSS 变量：
 
 ```css
 @theme {
   --color-primary: #2d6dc3;
   --color-primary-dark: #3b7bd9;
-  /* ... more color variables */
+  /* ... 更多颜色变量 */
 }
 ```
 
-### Add Works
+### 添加作品
 
-Add your work information in `src/collections/works.json`.
+在 `src/collections/works.json` 中添加你的作品信息。
 
-### Add Blog Posts
+### 添加博客文章
 
-Create new MDX files in the `src/content/post/` directory. The project uses Astro v5 Content Layer API with `glob` loader for content collections, ensuring compatibility with Astro v6.
+在 `src/content/post/` 目录下创建新的 MDX 文件。项目使用 Astro v5 Content Layer API 和 `glob` 加载器来管理内容集合.
 
-**Note**: This template has been fully upgraded to Astro v5.15 standards and is compatible with Astro v6:
-- ✅ Uses new Content Layer API (`glob` loader)
-- ✅ Uses `entry.id` instead of deprecated `entry.slug`
-- ✅ Uses `render(entry)` instead of deprecated `entry.render()`
-- ✅ Uses `import.meta.env` instead of `process.env`
-- ✅ Uses `import.meta.glob()` instead of deprecated `Astro.glob()`
-- ✅ All `getStaticPaths()` params are string type (v6 requirement)
 
-## Figma Assets
+
+## 使用素材
 
 - **Programming Sticker**: [Figma rogramming-sticker-1-0](https://www.figma.com/community/file/1392100849031958853/programming-sticker-1-0)
 - **Bento Cards**：[Figma Bento Cards](https://www.figma.com/community/file/1231184483170475120)
 - **Social Cards**: [Figma Bento 2.5d](https://www.figma.com/community/file/1232620929235403629/bento-2-5d-widgets)
 
+## 📧 联系方式
 
-## 📧 Contact
-
-- **Author**: Ricoui
-- **Blog**: [ricoui.com](https://github.com/ricocc)
-- **Email**: hello@ricoui.com
+- **作者**: Ricoui
+- **博客**: [ricoui.com](https://github.com/ricocc)
+- **邮箱**: hello@ricoui.com
 - **Twitter**: [@ricouii](https://x.com/ricouii)
 - **GitHub**: [@ricocc](https://github.com/ricocc)
 
 
-## 💡 Other Products
+## 💡 其他产品
 
-- **Rico Blog** - Open Source: [https://github.com/ricocc/public-portfolio-site](https://github.com/ricocc/public-portfolio-site)
+-  **Rico Blog** - 开源 :  [https://github.com/ricocc/public-portfolio-site](https://github.com/ricocc/public-portfolio-site)
 
 - **OG Gallery**: [ricoog.com](https://ricoog.com/)
 
 
-## 🙏 Acknowledgments
+## 🙏 致谢
 
-- [Astro](https://astro.build) - Excellent static site generator
-- [Tailwind CSS](https://tailwindcss.com) - Utility-first CSS framework
-- All developers who contributed to this project
-
-
-## About the Author
-
-I'm Rico, a web/UI designer passionate about creating fun and creative work. I have experience in UI/UX design and am currently focused on web design, visual implementation, and exploring development projects. I regularly update my blog on <a href="https://ricoui.com/" target="_blank">Rico's Blog</a>. You can also follow me on Xiaohongshu  [@Rico的设计漫想](https://www.xiaohongshu.com/user/profile/5f2b6903000000000101f51f) 和 X [@ricouii](https://x.com/ricouii).
+- [Astro](https://astro.build) - 优秀的静态站点生成器
+- [Tailwind CSS](https://tailwindcss.com) - 实用优先的 CSS 框架
 
 
-Or add me on WeChat—let’s be friends.
+
+
+## 关于作者
+
+我是Rico，网页/UI设计师，热衷于做些有趣和创意的作品。拥有 UI/UX 设计工作经验，目前专注于网页设计和视觉落地，以及开发项目探索。我平时在博客<a href="https://ricoui.com/" target="_blank">Rico's Blog</a>更新内容。也可以关注我的小红书 [@Rico的设计漫想](https://www.xiaohongshu.com/user/profile/5f2b6903000000000101f51f) 和 推特 [@ricouii](https://x.com/ricouii).
+
+或者添加我的微信，交个朋友
 
 <img src="https://ricoui.com/assets/wechat.png" alt="ricocc-wechat" width="280" height="auto" style="display:inline-block;margin:12px;">
 
 
-## 💜 Support the Author
+## 💜 支持作者
 
-If you’ve found this helpful, even a small contribution can greatly encourage creators. Thank you!
+
+如果觉得有所帮助的话，一点点支持就可以大大激励创作者的热情，感谢！
 
 <img src="https://ricoui.com/assets/zanshangma.jpg" alt="ricocc-wechat" width="280" height="auto" style="display:inline-block;margin:12px;">
 
-<a href="https://ko-fi.com/T6T817U4KZ" target="_blank" style="display:inline-block;margin:.5rem auto 1rem;" data-astro-cid-wlrjxfd7=""><img height="44" style=" border:0px;height:44px;" src="https://storage.ko-fi.com/cdn/kofi2.png?v=6" alt="Buy Me a Coffee at ko-fi.com" data-astro-cid-wlrjxfd7=""></a>
 
-## 📝 Changelog
+---
 
-### Latest Updates (2024)
-
-- **Upgraded to Astro 5.15.4** - Fully compliant with Astro v5.15 standards and compatible with Astro v6
-- **Content Collections Upgrade** - Using new Content Layer API, all legacy APIs removed
-- **API Modernization** - All deprecated APIs updated to latest standards
-- **Performance Optimization** - Optimized build and runtime performance
-
-⭐ If this project helps you, please give it a Star!
+⭐ 如果这个项目对你有帮助，请给一个 Star！
