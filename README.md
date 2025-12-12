@@ -1,12 +1,5 @@
 
 
-# Rico Portfolio - 设计师个人作品集网站
-
-一个基于 Astro 构建的现代化、高性能设计师个人作品集网站模板。采用复古蓝色主题，支持暗色模式，具有精美的动画效果和优秀的用户体验。
-
-![Astro](https://img.shields.io/badge/Astro-5.15.4-FF5D01?logo=astro&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind-4.1.14-38B2AC?logo=tailwind-css&logoColor=white)
-![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)
 
 ## ✨ 特性
 
